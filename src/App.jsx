@@ -1,22 +1,10 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
+import { Profule } from "./components/Profile";
+import { Massages } from "./components/Messages";
+import { Setting } from "./components/Settings";
 
 
-const Profile = () => {
-	return (
-	<h2>Это страница профиля</h2>
-	)
-}
-const Messages = () => {
-	return (
-		<h2>Страница с сообщениями</h2>
-	)
-}
-const Settings = () => {
-	return (
-		<h2>Это страница с настройками</h2>
-	)
-}
 
 function App() {
 	return (
@@ -24,7 +12,7 @@ function App() {
 			<div className='row'>
 				<div className='col-3'>
 					<div className='nav flex-column nav-pills'>
-						<NavLink className='nav-link active' to='/'>
+						<NavLink className='nav-link' to='/'>
 							Главная
 						</NavLink>
 						<NavLink className='nav-link' to='profile'>
