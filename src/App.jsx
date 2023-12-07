@@ -1,12 +1,12 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Profule } from "./components/Profile";
-import { Massages } from "./components/Messages";
-import { Setting } from "./components/Settings";
+import { Profile } from "./components/Profile";
+import { Messages } from "./components/Messages";
+import { Settings } from "./components/Settings";
 
 
 
-function App() {
+function App(props) {
 	return (
 		<div className='container mt-5'>
 			<div className='row'>
@@ -29,8 +29,8 @@ function App() {
 				<div className='col-9'>
 					<Routes>
 						<Route path='/' element={<h2>Выбирайте из меню</h2>}/>
-						<Route path='/profile' element={<Profile />} />
-						<Route path='messages' element={<Messages />}/>
+						<Route path='/profile' element={<Profile function={props.functions.key_getUser}/>} />
+						<Route path='messages' element={<Messages function={props.functions.key_getUsers}/>}/>
 						<Route path='/settings' element={<Settings />} />
 					</Routes>
 				</div>
